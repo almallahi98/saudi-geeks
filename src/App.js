@@ -1,9 +1,10 @@
-// import logo from './logo.svg'; our icon gose here
+import React from 'react';
 import './App.css';
 
 function App() {
   return (
     <>
+    <p>hello </p>
       {/* router here */}
       
     </>
