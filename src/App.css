@@ -1,0 +1,19 @@
+
+.top-navbar {
+    position: relative;
+    z-index: 10;
+  }
+  
+  
+  
+  .top-navbar .navbar-light .navbar-nav .nav-link {
+    color: #134be5;
+    font-size: 18px;
+    padding: 0px 20px;
+    border-radius: 4px;
+    
+  }
+  
+  
+  
+  
