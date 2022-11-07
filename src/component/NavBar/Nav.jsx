@@ -1,13 +1,22 @@
 import { ReactNode } from 'react';
+import { Navbar, Nav, NavDropdown, Form, Button, ButtonGroup } from 'react-bootstrap';
 import {
-  Box,
-  Flex,
-  Link,
-  Button,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  useColorMode,
+    Box,
+      Flex,
+      Avatar,
+      Link,
+      Menu,
+      MenuButton,
+      MenuList,
+      MenuItem,
+      MenuDivider,
+      useDisclosure,
+      useColorModeValue,
+      Stack,
+      useColorMode,
+      Center,
+      Left,
+      Right,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 
@@ -25,7 +34,7 @@ const NavLink = ({ children } = { children: ReactNode }) => (
   </Link>
 );
 
-export default function Nav() {
+export default function Navs() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -36,13 +45,12 @@ export default function Nav() {
         <Link className="nav-link" to="/">
                   Sauid Geeks
                 </Link>
-          <header className="top-navbar">
+          <header className="top-navbar" >
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="/">
           </a>
-          <button
-            
+          <button           
             alignItems="center"
             justifyContent="space-between"
             className="navbar-toggler"
@@ -54,27 +62,52 @@ export default function Nav() {
             aria-label="Toggle navigation"
           >
           </button>
-          <div className="collapse navbar-collapse" id="navbars-rs-food">
-            <ul className="navbar-nav ml-auto">
-               <Link className="nav-link" to="/">
-                  Home
-                </Link>
-                <Link className="nav-link" to="/About_us">
-                  About us
-                </Link>
-                <Link className="nav-link" to="/About_us">
-                 Login
-                </Link>
-                <Link className="nav-link" to="/Contact">
-                Contact Us
-                </Link>
-            </ul>
-          </div>
+          <Menu>
+                 <MenuButton
+                   p
+                   as={Button}
+                   rounded={'full'}
+                   variant={'link'}
+                   cursor={'pointer'}
+                   minW={0}>
+                  <Avatar
+                  src="./Saudi Geeks.png"
+                   size={'sm'}    
+                                 
+                  />
+                </MenuButton>
+                 <MenuList alignItems={'center'}>
+                   <br />
+                  <Center>
+                    <Avatar
+                       size={'2xl'}
+                       src={''}
+                     />
+                   </Center>
+                   <br />
+                 <Center>                   
+                   </Center>
+                   <br />
+                  <MenuDivider />
+                  <MenuItem href="./Login">Home</MenuItem>
+                   <MenuItem>About Us</MenuItem>
+                   <MenuItem>Contact Us</MenuItem>
+                 
+             </MenuList>
+            </Menu>
         </div>
       </nav>
     </header>
-          <Flex alignItems={'center'}>
+          <Flex alignItems={'right'}>
             <Stack direction={'row'} spacing={7}>
+            <Button
+            as={'a'}
+            fontSize={'sm'}
+            fontWeight={400}
+            variant={'link'}
+            href={'#'}>
+            Sign In
+          </Button>
               <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
