@@ -17,6 +17,7 @@ const Logo = (props: any) => {
       height={32}
       viewBox="0 0 120 28"
       xmlns="http://www.w3.org/2000/svg"
+      // xmlns="./assets/SaudiGeeks.png"
       {...props}
     >
       <path
@@ -81,7 +82,7 @@ export default function Footer() {
         <Stack direction={"row"} spacing={6}>
           <Link href={"/"}>Home</Link>
           <Link href={"/about"}>About</Link>
-          <Link href={"contact"}>Contact</Link>
+          <Link href={"/contact"}>Contact</Link>
         </Stack>
       </Container>
 
@@ -101,13 +102,16 @@ export default function Footer() {
         >
           <Text>© 2022 Chakra Templates. All rights reserved</Text>
           <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"#"}>
+            <SocialButton label={"Twitter"} href={"https://twitter.com/"}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={"YouTube"} href={"#"}>
+            <SocialButton label={"YouTube"} href={"https://www.youtube.com/"}>
               <FaYoutube />
             </SocialButton>
-            <SocialButton label={"Instagram"} href={"#"}>
+            <SocialButton
+              label={"Instagram"}
+              href={"https://www.instagram.com/"}
+            >
               <FaInstagram />
             </SocialButton>
           </Stack>
