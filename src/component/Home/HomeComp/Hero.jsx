@@ -66,16 +66,42 @@ function Hero() {
                         {/*entrest*/}
                         hi
                     </Text>
-                    <SimpleGrid h={'100%'} columns={[1, 2, 4, 4]} spacing='15px' px={'10px'}>
-                        <Box
-                            backgroundImage="url('/resources/imges/Ministry_OF_Energy_-_Saudi_Arabia.svg')"
-                            backgroundPosition="center"
-                            backgroundRepeat="no-repeat"
-                            height='100%'>
+                    <SimpleGrid h={'100%'} columns={[1, 2, 4,4]} spacing='15px' px={'10px'}>
+                                <Box 
+                                backgroundImage="url('/resources/imges/Ministry_OF_Energy_-_Saudi_Arabia.svg')"
+                                backgroundPosition="center"
+                                backgroundRepeat="no-repeat"
+                                height='100%'>
+                                    
+                                </Box>
+                                <Box 
+                                backgroundImage="url('/resources/imges/pngegg.png')"
+                                backgroundPosition="center"
+                                backgroundRepeat="no-repeat"
+                                height='100%'>
+                                    
+                                </Box>
+                                <Box 
+                                backgroundImage="url('/resources/imges/aramco.png')"
+                                backgroundPosition="center"
+                                backgroundRepeat="no-repeat"
+                                height='90%'
+                                maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'
 
-                        </Box>
-
-                    </SimpleGrid>
+                                >
+                                    
+                                </Box>
+                                <Box 
+                                backgroundImage="url('/resources/imges/SDAIA.svg')"
+                                backgroundPosition="center"
+                                backgroundRepeat="no-repeat"
+                                height='100%'
+                                width=''
+                                >
+                                    
+                                </Box>
+                         
+                            </SimpleGrid>
 
                 </Flex>
             </Center>
