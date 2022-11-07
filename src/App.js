@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './App.css';
 import Navs from './component/NavBar/Nav';
 import About from './component/About_us/About_us'
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <Nav/>
+      <Navs/>
         
       {/* router here */}
       
