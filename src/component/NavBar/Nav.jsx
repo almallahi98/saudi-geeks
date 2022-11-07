@@ -69,6 +69,8 @@ import {
         
         
         <Flex
+        position={'fixed'}
+           width={"100%"}
           fontFamily={'Garamond, serif'}
           fontSize={17}
           fontWeight={'bold'}

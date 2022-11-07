@@ -15,7 +15,7 @@ import {
     
   } from '@chakra-ui/react'
 
-function InitialFocus() {
+function LoginFrom() {
     const { isOpen, onOpen, onClose } = useDisclosure()
   
     const initialRef = React.useRef(null)
@@ -28,7 +28,7 @@ function InitialFocus() {
         
   
         <Modal
-          initialFocusRef={initialRef}
+          LoginFromRef={initialRef}
           finalFocusRef={finalRef}
           isOpen={isOpen}
           onClose={onClose}
@@ -61,4 +61,4 @@ function InitialFocus() {
       </>
     )
   }
-  export default InitialFocus;
+  export default LoginFrom;
