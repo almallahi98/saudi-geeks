@@ -3,22 +3,29 @@ import React from 'react';
 import { Route, Routes } from 'react-router';
 import './App.css';
 import CardAboutUs from './component/About_us/CardAboutUs'
+import Footer from './component/Footer/Footer';
+
 
 //paths
 import Home from './component/Home/Home'
-
+import Profile from './component/profile/Profile';
 
 function App() {
   return (
     <>
       {/* <Nav/> */}
-        
+
       {/* router here */}
+
       <Routes>
+
         <Route path='' element={<Home/>}/>
         <Route path='aboutus' element={<CardAboutUs/>}/>
+        <Route path='profile' element={<Profile/>}/>
+        {/* <Route path='about' element={''}/> page is not completed */}
       </Routes>
-      
+      <Footer />
+
     </>
   );
 }
