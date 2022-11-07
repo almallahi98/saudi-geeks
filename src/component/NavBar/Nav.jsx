@@ -127,7 +127,7 @@ import {
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                 
               </Button>
-              <Button onClick={onOpen}>Login</Button>
+              
               <Link  to={"/About_us"}>
                
                <Button onClick={onOpen}>Login</Button>
@@ -157,7 +157,7 @@ import {
             </ModalBody>
   
             <ModalFooter>
-              <Button onClick={"About_us"} colorScheme='blue' mr={3}>
+              <Button onClick={"/About_us"} colorScheme='blue' mr={3}>
                 Log in
               </Button>
               <Button onClick={onClose}>Cancel</Button>
