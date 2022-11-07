@@ -71,11 +71,13 @@ function Hero() {
                                 backgroundImage="url('/resources/imges/Ministry_OF_Energy_-_Saudi_Arabia.svg')"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
+                                
                                 height='100%'>
                                     
                                 </Box>
                                 <Box 
                                 backgroundImage="url('/resources/imges/pngegg.png')"
+                                // backgroundImage="url('/resources/imges/20301.gif')"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
                                 height='100%'>
@@ -85,7 +87,7 @@ function Hero() {
                                 backgroundImage="url('/resources/imges/aramco.png')"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
-                                height='90%'
+                                height='100%'
                                 maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'
 
                                 >
@@ -96,7 +98,7 @@ function Hero() {
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
                                 height='100%'
-                                width=''
+
                                 >
                                     
                                 </Box>
