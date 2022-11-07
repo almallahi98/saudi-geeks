@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './logo.svg'; our icon gose here
 import { Route, Routes } from 'react-router';
 import './App.css';
-import Footer from './component/Footer';
+import Footer from './component/Footer/Footer';
 
 //paths
 import Home from './component/Home/Home'
