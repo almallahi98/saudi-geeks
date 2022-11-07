@@ -1,18 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { useNavigate } from "react-router-dom";
-import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    FormControl,
-    FormLabel,
-    Input,
-    
-  } from '@chakra-ui/react'
+import Login from './loginmodel/LoginForm';
 import {
     Box,
     Flex,
@@ -66,36 +54,41 @@ import {
     // Use Navigate 
 
     const navigate = useNavigate();
-    const [Email, setEmail] = useState("")
-    const [Pass, setPass] = useState("")
+    const [values,setValues]=useState({
+        email:'',
+        password:''
+      })
     
-    useEffect(() => {
-       
-        setEmail(localStorage.getItem("Email"));
-        setPass(localStorage.getItem("Passowrd"));
-    }, []);
-    
+      const onChange=(e)=>{
+        setValues({...values,[e.target.name]: e.target.value})
+      }
+
     return (
         
       <Box>
         
-        <Flex
         
+        <Flex
+          fontFamily={'Garamond, serif'}
+          fontSize={17}
+          fontWeight={'bold'}
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
+          border={7}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
           align={'center'}>
           <Flex
-          
+             
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
             display={{ base: 'flex', md: 'none' }}>
             <IconButton
+            
               onClick={onToggle}
               icon={
                 isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
@@ -112,7 +105,7 @@ import {
               Logo
             </Text>
   
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+            <Flex  display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
             </Flex>
           </Flex>   
@@ -122,49 +115,11 @@ import {
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
-            spacing={6}>
-                <Button onClick={toggleColorMode}>
+            spacing={6}> 
+                <Button  onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                
               </Button>
-              
-              <Link  to={"/About_us"}>
-               
-               <Button onClick={onOpen}>Login</Button>
-                </Link>
-        
-  
-        <Modal
-          initialFocusRef={initialRef}
-          finalFocusRef={finalRef}
-          isOpen={isOpen}
-          onClose={onClose}
-        >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Log in Your Acoount</ModalHeader>
-            <ModalCloseButton />
-            <ModalBody pb={6}>
-              <FormControl>
-                <FormLabel>Email</FormLabel>
-                <Input type={"email"} ref={initialRef} placeholder='Email' required />
-              </FormControl>
-  
-              <FormControl mt={4}>
-                <FormLabel>Password</FormLabel>
-                <Input type={"password"} placeholder='Password' required />
-              </FormControl>
-            </ModalBody>
-  
-            <ModalFooter>
-              <Button onClick={"/About_us"} colorScheme='blue' mr={3}>
-                Log in
-              </Button>
-              <Button onClick={onClose}>Cancel</Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
-            
+              <Login/>
           </Stack>
         </Flex>
          
@@ -242,6 +197,7 @@ import {
             <Text fontSize={'sm'}>{subLabel}</Text>
           </Box>
           <Flex
+          
             transition={'all .3s ease'}
             transform={'translateX(-10px)'}
             opacity={0}
@@ -259,6 +215,7 @@ import {
   const MobileNav = () => {
     return (
       <Stack
+      fontWeight={"bold"}
         bg={useColorModeValue('white', 'gray.800')}
         p={4}
         display={{ md: 'none' }}>
@@ -271,10 +228,12 @@ import {
   
   const MobileNavItem = ({ label, children, href }: NavItem) => {
     const { isOpen, onToggle } = useDisclosure();
-  
+    
     return (
+        
       <Stack spacing={4} onClick={children && onToggle}>
         <Flex
+        
           py={2}
           as={Link}
           href={href ?? '#'}
@@ -284,6 +243,7 @@ import {
             textDecoration: 'none',
           }}>
           <Text
+            
             fontWeight={600}
             color={useColorModeValue('gray.600', 'gray.200')}>
             {label}
@@ -301,6 +261,7 @@ import {
   
         <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
           <Stack
+          
             mt={2}
             pl={4}
             borderLeft={1}
@@ -309,7 +270,7 @@ import {
             align={'start'}>
             {children &&
               children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
+                <Link  key={child.label} py={2} href={child.href}>
                   {child.label}
                 </Link>
               ))}
@@ -327,17 +288,18 @@ import {
   }
   
   const NAV_ITEMS: Array<NavItem> = [
+    
     {
-      label: 'Home',
-      href:"#"
+      label: 'Home' , 
+      href:"/"
     },
     {
       label: 'About Us',
-      href:"#"
+      href:"/About_us"
     },
     {
       label: 'Contact Us',
-      href: '#',
+      href: '/Contact',
     },
-    
+
   ];
