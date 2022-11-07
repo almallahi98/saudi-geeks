@@ -12,7 +12,7 @@ import Home from './component/Home/Home'
 function App() {
   return (
     <>
-      <Nav/>
+      {/* <Nav/> */}
         
       {/* router here */}
       <Routes>

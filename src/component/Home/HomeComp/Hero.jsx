@@ -62,7 +62,7 @@ function Hero() {
             <Center w={'100%'} minH={'100vh'} bg={'rgba(12,26,44,1)'}>
                 {/* the pics gose hear !!  ['90%','300px','350px','350px']*/}
                 <Flex direction={'column'} w={'100%'} h={'300px'} bg={'whiteAlpha.800'} py={"15px"}>
-                    <Text textAlign={'center'} fontSize={"2xl"} textColor={'black'} py={'3px'}>
+                    <Text textAlign={'center'} fontWeight={'bold'} fontSize={"2xl"} textColor={'black'} py={'3px'}>
                             {/*entrest*/}
                             hi
                         </Text>
@@ -72,7 +72,7 @@ function Hero() {
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
                                 height='100%'>
-                                    
+
                                 </Box>
                                 
                             </SimpleGrid>
