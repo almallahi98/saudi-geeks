@@ -7,6 +7,7 @@ import About from './component/About_us/About_us'
 
 //paths
 import Home from './component/Home/Home'
+import Profile from './component/profile/Profile';
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       {/* router here */}
       <Routes>
         <Route path='' element={<Home/>}/>
+        <Route path='profile' element={<Profile/>}/>
+        <Route path='about' element={''}/>
       </Routes>
       
     </>
