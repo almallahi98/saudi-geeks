@@ -59,24 +59,25 @@ function Hero() {
                 </VStack>
 
             </Flex>
-            <Center w={'100%'} minH={'50vh'} bg={'rgba(12,26,44,1)'}>
+            <Center w={'100%'} minH={'100vh'} bg={'rgba(12,26,44,1)'}>
                 {/* the pics gose hear !!  ['90%','300px','350px','350px']*/}
-                <Box w={'100%'} h={'90%'} bg={'white'}>
-                    <Center>
-                        <Text fontSize={"2xl"} textColor={'black'} pt={'3px'}>
+                <Flex direction={'column'} w={'100%'} h={'300px'} bg={'whiteAlpha.800'} py={"15px"}>
+                    <Text textAlign={'center'} fontSize={"2xl"} textColor={'black'} py={'3px'}>
                             {/*entrest*/}
                             hi
                         </Text>
-                        <SimpleGrid columns={[2, null, 3]} spacing='40px'>
-                                <Box bg='tomato' height='100%'></Box>
-                                <Box bg='tomato' height='100%'></Box>
-                                <Box bg='tomato' height='100%'></Box>
-                                <Box bg='tomato' height='100%'></Box>
-                                <Box bg='tomato' height='100%'></Box>
+                        <SimpleGrid h={'100%'} columns={[1, 2, 4,4]} spacing='15px' px={'10px'}>
+                                <Box 
+                                backgroundImage="url('/resources/imges/Ministry_OF_Energy_-_Saudi_Arabia.svg')"
+                                backgroundPosition="center"
+                                backgroundRepeat="no-repeat"
+                                height='100%'>
+                                    
+                                </Box>
+                                
                             </SimpleGrid>
-                    </Center>
 
-                </Box>
+                </Flex>
             </Center>
         </Box>
     );
