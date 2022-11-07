@@ -8,16 +8,13 @@ import {
     Flex,
     Text,
     Stack,
-    Button,
     useColorModeValue,
   } from '@chakra-ui/react';
   
   
   
   export default function SocialProfileWithImage(props) {
-    
-    let Stats ;
-    let color ;
+   
 
     
     return (

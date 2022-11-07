@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 import CardAboutUs from './component/About_us/CardAboutUs'
 import Footer from './component/Footer/Footer';
+import Nav from './component/NavBar/Nav'
 
 
 //paths
@@ -13,7 +14,7 @@ import Profile from './component/profile/Profile';
 function App() {
   return (
     <>
-      {/* <Nav/> */}
+      <Nav/>
 
       {/* router here */}
 
