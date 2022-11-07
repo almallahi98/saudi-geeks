@@ -1,57 +1,61 @@
-import React from 'react'
+import React from "react";
 import {
     Stack,
     Flex,
-    Button,
     Text,
     VStack,
     useBreakpointValue,
-  } from '@chakra-ui/react';
+    Box,
+} from "@chakra-ui/react";
 
 function Hero() {
-  return (
-    <Flex
-    w={'full'}
-    h={'100vh'}
-    backgroundImage={
-      'url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'
-    }
-    backgroundSize={'cover'}
-    backgroundPosition={'center center'}>
-    <VStack
-      w={'full'}
-      justify={'center'}
-      px={useBreakpointValue({ base: 4, md: 8 })}
-      bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
-      <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
-        <Text
-          color={'white'}
-          fontWeight={700}
-          lineHeight={1.2}
-          fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-          eiusmod tempor
-        </Text>
-        <Stack direction={'row'}>
-          <Button
-            bg={'blue.400'}
-            rounded={'full'}
-            color={'white'}
-            _hover={{ bg: 'blue.500' }}>
-            Show me more
-          </Button>
-          <Button
-            bg={'whiteAlpha.300'}
-            rounded={'full'}
-            color={'white'}
-            _hover={{ bg: 'whiteAlpha.500' }}>
-            Show me more
-          </Button>
-        </Stack>
-      </Stack>
-    </VStack>
-  </Flex>
-  )
+    return (
+        <Box>
+            
+            
+            <Flex
+                w={"full"}
+                h={"100vh"}
+                backgroundImage={window.location.origin + "/resources/imges/iot.jpeg"}
+                backgroundSize={"cover"}
+                backgroundPosition={"center center"}
+                
+            >
+                <VStack
+                    w={"full"}
+                    justify={"center"}
+                    textAlign={'center'}
+                    px={useBreakpointValue([0,2,0,0])}
+                    bgGradient={"linear(to-t, rgba(12,26,44,.9) 25%, transparent)"}
+                >
+                    <Stack maxW={"90%"} align={"flex-end"} spacing={4} >
+                        <Text
+                            fontWeight={700}
+                            lineHeight={1.2}
+                            fontSize={useBreakpointValue({ base: "1xl", md: "2xl" })}
+                            textColor={"whiteAlpha.700"}
+                        >
+                            The Internet of Things (IoT) involves the use of connected devices
+                            for the exchange of data, (IoT) refers to a network of devices
+                            that are connected via an internet connection. These devices are
+                            then used to gather and analyze data for a wide range of purposes
+                            in various industries.
+                        </Text>
+                    </Stack>
+                    <Box w={'100%'} minH={'20vh'}>
+                    
+                        <Box mt={'20vh'}  w={'100%'} minH={'45vh'} bg={'white'}>
+                            {/* the pics gose hear !!  ['90%','300px','350px','350px']*/}
+
+                        </Box>
+
+                    </Box>
+                </VStack>
+                
+            </Flex>
+            
+        </Box>
+    );
 }
 
-export default Hero
+export default Hero;
