@@ -17,7 +17,9 @@ import {
     useColorModeValue,
     VStack,
   } from '@chakra-ui/react';
-  import React from 'react';
+  // import React from 'react';
+  import React, { useState } from 'react'
+  import axios from "axios";
   import { BsGithub,BsPerson } from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
   //// لازم تحمل رياكت ايكون
@@ -38,7 +40,15 @@ import {
   
   export default function ContactFormWithSocialButtons() {
     const { hasCopied, onCopy } = useClipboard('example@example.com');
-  
+    const [fname, setFName] = useState();
+    const [email, setEmail] = useState();
+    const [message, setMessege] = useState();
+    const url = "https://6362424c66f75177ea2a99a3.mockapi.io/Contact"
+
+
+    const postapi = () => {
+      axios.post(url,{fname,email,message})
+    }
     return (
       <Flex
         bg={useColorModeValue('gray.100', 'gray.900')}
@@ -121,7 +131,8 @@ import {
   
                       <InputGroup>
                         <InputLeftElement children={<BsPerson />} />
-                        <Input type="text" name="name" placeholder="Your Name" />
+                        <Input type="text" name="name" onChange={(e) => {
+          setFName(e.target.value)}} placeholder="Your Name" />
                       </InputGroup>
                     </FormControl>
   
@@ -133,6 +144,8 @@ import {
                         <Input
                           type="email"
                           name="email"
+                          onChange={(e) => {
+                            setEmail(e.target.value)}}
                           placeholder="Your Email"
                         />
                       </InputGroup>
@@ -141,7 +154,8 @@ import {
                     <FormControl isRequired>
                       <FormLabel>Message</FormLabel>
   
-                      <Textarea
+                      <Textarea onChange={(e) => {
+          setMessege(e.target.value)}}
   bgGradient={[
     'linear(to-tr, teal.300, yellow.400)',
     'linear(to-t, purple.200, teal.500)',
@@ -161,6 +175,7 @@ bgGradient='linear(to-r, teal.500, purple.500)'
                       _hover={{
                         bg: 'purple.500',
                       }}
+                      onClick={postapi}
                       isFullWidth>
                       Send Message
                     </Button>

@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router';
 import './App.css';
 import Nav from './component/NavBar/Nav';
 import About from './component/About_us/About_us'
-import Contact from './component/Contact/Contact';
+// import Contact from './component/Contact/Contact';
 
 //paths
 import Home from './component/Home/Home'
@@ -14,10 +14,10 @@ function App() {
   return (
     <>
       {/* <Nav/> */}
-        {/* <Contact/> */}
+{/* <Contact/> */}
       {/* router here */}
       <Routes>
-        <Route path='' element={<Home/>}/>
+        <Route path='' elegitment={<Home/>}/>
       </Routes>
       
     </>
