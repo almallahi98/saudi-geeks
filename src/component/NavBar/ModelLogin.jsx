@@ -1,4 +1,4 @@
-import { React, useRef,useState } from "react";
+import { React, useRef, useState } from "react";
 import axios from "axios";
 import {
   Modal,
@@ -17,18 +17,26 @@ import {
 
 function ModelLogin() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [Login, setLogin] = useState({username:'',password:''})
-  const LoginLogout=useRef(null);
-  
+  const [Login, setLogin] = useState({ username: '', password: '' })
+  const LoginLogout = useRef(null);
+
   const initialRef = useRef(null);
   const finalRef = useRef(null);
   return (
     <>
-      <Button onClick={(e)=>
+      <Button onClick={(e) => {
+        
+        LoginLogout.current = e.target;
+        if(e.target.innerText ==='Login')
         {
           onOpen();
-          LoginLogout.current=e.target;
-          }}>Login</Button>
+          
+        }
+        else
+        {
+          
+        }
+      }}>Login</Button>
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
@@ -43,19 +51,19 @@ function ModelLogin() {
             <FormControl>
               <FormLabel>User Name</FormLabel>
               <Input ref={initialRef} placeholder="User Name"
-              onChange={
-                e=>{
-                    setLogin({...Login,username:e.target.value})
-                  
-                  }}/>
+                onChange={
+                  e => {
+                    setLogin({ ...Login, username: e.target.value })
+
+                  }} />
             </FormControl>
 
             <FormControl mt={4}>
               <FormLabel>Password</FormLabel>
-              <Input type={"password"} placeholder="Password" 
-              onChange={e=>{
-                setLogin({...Login,password:e.target.value})
-              }}
+              <Input type={"password"} placeholder="Password"
+                onChange={e => {
+                  setLogin({ ...Login, password: e.target.value })
+                }}
               />
             </FormControl>
           </ModalBody>
@@ -65,16 +73,17 @@ function ModelLogin() {
               colorScheme="blue"
               mr={3}
               onClick={(e) => {
-                axios.get(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`).then(res=>
-                {
-                  if(res.data[0].username === Login.username && res.data[0].password === Login.password)
-                  {
-                    LoginLogout.current.innerText ='Logout'
-                    onClose()
-                    
-                  }
-                });
-              
+                if (LoginLogout.current.innerText === 'Login') {
+                  axios.get(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`).then(res => {
+                    if (res.data[0].username === Login.username && res.data[0].password === Login.password) {
+                      
+                      LoginLogout.current.innerText = 'Logout'
+                      localStorage.setItem('userObj',JSON.stringify({user:res.data[0].username,password:res.data[0].password,id:res.data[0].id}));
+                      console.log('login');
+                      onClose()
+                      }
+                  });
+                }
               }}
             >
               Login
