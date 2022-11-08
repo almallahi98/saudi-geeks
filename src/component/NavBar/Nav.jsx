@@ -266,19 +266,15 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Contact us',
         href: '#',
-      },
-      {
-        label: 'placeholder',
-        href: '#',
-      },
+      }
     ],
   },
   {
-    label: 'placeholder',
+    label: 'placeholder1',
     href: '#',
   },
   {
-    label: 'placeholder',
+    label: 'placeholder2',
     href: '#',
   },
 ];
