@@ -18,9 +18,9 @@ import {
     VStack,
   } from '@chakra-ui/react';
   import React from 'react';
-  import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
+  import { BsGithub,BsPerson } from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
-  
+  //// لازم تحمل رياكت ايكون
   const confetti = {
     light: {
       primary: '4299E1', // blue.400
@@ -89,7 +89,7 @@ import {
                     />
                   </Tooltip>
   
-                  <Link href="#">
+                  <Link href="https://github.com/#">
                     <IconButton
                       aria-label="github"
                       variant="ghost"
@@ -104,37 +104,13 @@ import {
                     />
                   </Link>
   
-                  <Link href="#">
-                    <IconButton
-                      aria-label="twitter"
-                      variant="ghost"
-                      size="lg"
-                      icon={<BsTwitter size="28px" />}
-                      _hover={{
-                        bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
-                      }}
-                      isRound
-                    />
-                  </Link>
+
   
-                  <Link href="#">
-                    <IconButton
-                      aria-label="linkedin"
-                      variant="ghost"
-                      size="lg"
-                      icon={<BsLinkedin size="28px" />}
-                      _hover={{
-                        bg: 'blue.500',
-                        color: useColorModeValue('white', 'gray.700'),
-                      }}
-                      isRound
-                    />
-                  </Link>
+
                 </Stack>
   
                 <Box
-                  bg={useColorModeValue('white', 'gray.700')}
+                  bgGradient='linear(to-l, #7928CA, #FF0080)'
                   borderRadius="lg"
                   p={8}
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
@@ -166,6 +142,11 @@ import {
                       <FormLabel>Message</FormLabel>
   
                       <Textarea
+  bgGradient={[
+    'linear(to-tr, teal.300, yellow.400)',
+    'linear(to-t, purple.200, teal.500)',
+    'linear(to-b, orange.100, purple.300)',
+  ]}
                         name="message"
                         placeholder="Your Message"
                         rows={6}
@@ -174,11 +155,11 @@ import {
                     </FormControl>
   
                     <Button
-                      colorScheme="blue"
-                      bg="blue.400"
+bgGradient='linear(to-r, teal.500, purple.500)'
+                      bg="teal.400"
                       color="white"
                       _hover={{
-                        bg: 'blue.500',
+                        bg: 'purple.500',
                       }}
                       isFullWidth>
                       Send Message
