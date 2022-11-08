@@ -14,6 +14,7 @@ import {
   FormLabel,
   useDisclosure,
   Text,
+  Box,
   Link,
 } from "@chakra-ui/react";
 
@@ -92,12 +93,21 @@ function ModelLogin() {
                   setLogin({ ...Login, password: e.target.value })
                 }}
               />
-              <Text>or you can 
+              <Box display={'none'}>
+              <FormLabel>Repet Password</FormLabel>
+              <Input type={"password"} placeholder="Repet Password"
+                onChange={e => {
+                 
+                }}
+              />
+              </Box>
+              <Text>or you can <span>      </span>  
                 <Link 
                 as={'button'}
                 textDecoration={'underline'}
                 fontStyle={'italic'}
-                onClick={()=>{
+                onClick={(e)=>{
+                  e.target.parentNode.style.display="none"
                   //////////////////////////////////////////////////////////////////////////////////////// do somthing here
                 }}>
                 Register</Link></Text>
