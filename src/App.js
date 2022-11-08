@@ -30,7 +30,7 @@ function App() {
       {/* router here */}
        <Nav/>
       <Routes>
-        <Route path='' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='about_us' element={<CardAboutUs/>}/>
         <Route path='profile' element={<Profile/>}/>
         {/* <Route path='about' element={''}/> page is not completed */}

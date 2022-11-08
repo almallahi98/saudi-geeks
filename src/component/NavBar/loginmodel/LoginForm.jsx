@@ -1,7 +1,6 @@
-import React from 'react'
-import { useState , useEffect } from 'react'
+
+import { React, useRef, useState } from "react";
 import { useNavigate } from 'react-router'
-import {useHistory} from 'react-router-dom'
 import axios from "axios";
 import {
     Modal,
@@ -22,48 +21,30 @@ import {
 
 function LoginFrom() {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const initialRef = React.useRef(null)
-    const finalRef = React.useRef(null)
-    const Baseurl = "https://636242477521369cd068dfa6.mockapi.io/Login"
+    const initialRef = useRef(null);
+    const finalRef = useRef(null);
+    const [Login, setLogin] = useState({ username: '', password: '' })
+    const LoginLogout = useRef(null);
     
-    const [data,setData] = useState({
-      email:"",
-      password:""
-    })
-    const [emails ,  setemails] = useState([]);
-    const {email,password} = data;
-
-    const changeHandler = e => {
-      setData({...data,[e.target.name]:[e.target.value]});
-    }
-
-    const submitHandler = e => {
-      e.preventDefault();
-      console.log(data);
-        axios.post('https://636242477521369cd068dfa6.mockapi.io/Login' , {
-          email: email,
-          password: password
-        })
-        .then((ress) => {
-          console.log(ress.data)
-          alert('Successfully Logged in')
-
-        })
-        .catch((err)=>{
-          console.log(err)
-          console.log(err.ress)
-          alert("error")
-        } )
-      
-    }
-    console.log(data.email);
-    console.log(data.password);
+   
     
     
   
     return (
       <>
-        <Button onClick={onOpen}>Login</Button>
+       <Button onClick={(e) => {
+        
+        LoginLogout.current = e.target;
+        if(e.target.innerText ==='Login')
+        {
+          onOpen();
+          
+        }
+        else
+        {
+          
+        }
+      }}>Login</Button>
         <Modal
           LoginFromRef={initialRef}
           finalFocusRef={finalRef}
@@ -91,26 +72,21 @@ function LoginFrom() {
           <div className="container-login100 page-background">
             <div className="wrap-login100">
               <form className="login100-form validate-form">
-                <div className="wrap-input100 validate-input" data-validate="Enter Email">
-                  <input className="input100" type="email" name="email" placeholder="Email" value={email} onChange={(e) =>{
-                    setData((prev) =>({
-
+                <div className="wrap-input100 validate-input" data-validate="Enter username">
+                  <input className="input100" type="username"  ref={initialRef} name="username" placeholder="username" required onChange={ e=>{
+                    setLogin({...Login , username : e.target.value})
+                  } } />
                     
-                      ...prev,
-                      email: e.target.value
-                    })
-                    
-                    )
-                  }} />
+                                      
                   
                   <span className="focus-input100" data-placeholder='@' />
                 </div>
                 <div className="wrap-input100 validate-input" data-validate="Enter password">
-                  <input className="input100" type="password" name="pass" placeholder="Password" value={password} onChange={(e) =>
-                  setData((prev) => ({
-                    ...prev,
-                    password: e.target.value
-                  }))} />
+                  <input className="input100" type="password" name="pass" placeholder="Password" required onChange={e => {
+                  setLogin({ ...Login, password: e.target.value })
+                   }}
+                   
+                  />
                   <span className="focus-input100" data-placeholder="*" />
                 </div>
                 <div className="contact100-form-checkbox">
@@ -120,9 +96,28 @@ function LoginFrom() {
                   </label>
                 </div>
                 <div className="container-login100-form-btn">
-                  <button className="login100-form-btn">
-                    Login
-                  </button>
+                <Button
+              colorScheme="blue"
+              mr={3}
+              onClick={(e) => {
+                if (LoginLogout.current.innerText === 'Login') {
+                  axios.get(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`).then(res => {
+                    if (res.data[0].username === Login.username && res.data[0].password === Login.password) {
+                      
+                      LoginLogout.current.innerText = 'Logout'
+                      localStorage.setItem('userObj',JSON.stringify({user:res.data[0].username,password:res.data[0].password,id:res.data[0].id}));
+                      console.log('login');
+                      onClose()
+                      }
+                      else{
+                       
+                      }
+                  });
+                }
+              }}
+            >
+              Login
+            </Button>
                 </div>
               </form>
             </div>
