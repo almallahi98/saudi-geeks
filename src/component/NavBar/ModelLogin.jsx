@@ -13,7 +13,10 @@ import {
   Input,
   FormLabel,
   useDisclosure,
+  Text,
+  Link,
 } from "@chakra-ui/react";
+
 
 function ModelLogin() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -89,6 +92,15 @@ function ModelLogin() {
                   setLogin({ ...Login, password: e.target.value })
                 }}
               />
+              <Text>or you can 
+                <Link 
+                as={'button'}
+                textDecoration={'underline'}
+                fontStyle={'italic'}
+                onClick={()=>{
+                  //////////////////////////////////////////////////////////////////////////////////////// do somthing here
+                }}>
+                Register</Link></Text>
             </FormControl>
           </ModalBody>
 
