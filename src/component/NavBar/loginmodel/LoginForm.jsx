@@ -1,6 +1,8 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState , useEffect } from 'react'
 import { useNavigate } from 'react-router'
+import {useHistory} from 'react-router-dom'
+import axios from "axios";
 import {
     Modal,
     Button,
@@ -22,11 +24,14 @@ function LoginFrom() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
+    const Baseurl = "https://636242477521369cd068dfa6.mockapi.io/Login"
+    
     const [data,setData] = useState({
-      username:"",
+      email:"",
       password:""
     })
-    const {username,password} = data;
+    const [emails ,  setemails] = useState([]);
+    const {email,password} = data;
 
     const changeHandler = e => {
       setData({...data,[e.target.name]:[e.target.value]});
@@ -35,7 +40,24 @@ function LoginFrom() {
     const submitHandler = e => {
       e.preventDefault();
       console.log(data);
+        axios.post('https://636242477521369cd068dfa6.mockapi.io/Login' , {
+          email: email,
+          password: password
+        })
+        .then((ress) => {
+          console.log(ress.data)
+          alert('Successfully Logged in')
+
+        })
+        .catch((err)=>{
+          console.log(err)
+          console.log(err.ress)
+          alert("error")
+        } )
+      
     }
+    console.log(data.email);
+    console.log(data.password);
     
     
   
@@ -70,11 +92,25 @@ function LoginFrom() {
             <div className="wrap-login100">
               <form className="login100-form validate-form">
                 <div className="wrap-input100 validate-input" data-validate="Enter Email">
-                  <input className="input100" type="email" name="email" placeholder="Email" />
+                  <input className="input100" type="email" name="email" placeholder="Email" value={email} onChange={(e) =>{
+                    setData((prev) =>({
+
+                    
+                      ...prev,
+                      email: e.target.value
+                    })
+                    
+                    )
+                  }} />
+                  
                   <span className="focus-input100" data-placeholder='@' />
                 </div>
                 <div className="wrap-input100 validate-input" data-validate="Enter password">
-                  <input className="input100" type="password" name="pass" placeholder="Password" />
+                  <input className="input100" type="password" name="pass" placeholder="Password" value={password} onChange={(e) =>
+                  setData((prev) => ({
+                    ...prev,
+                    password: e.target.value
+                  }))} />
                   <span className="focus-input100" data-placeholder="*" />
                 </div>
                 <div className="contact100-form-checkbox">
