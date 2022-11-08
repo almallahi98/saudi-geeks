@@ -1,4 +1,4 @@
-import { React, useRef, useState } from "react";
+import { React, useRef, useState,useEffect } from "react";
 import axios from "axios";
 import {
   Modal,
@@ -18,25 +18,49 @@ import {
 function ModelLogin() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [Login, setLogin] = useState({ username: '', password: '' })
+  const loginState = useRef(null)
   const LoginLogout = useRef(null);
-
   const initialRef = useRef(null);
   const finalRef = useRef(null);
+  ;
+  useEffect(() => {
+    if(localStorage.getItem('userObj')!==null)
+    {
+      loginState.current='Logout'; 
+    }
+    else{
+      loginState.current='Login';
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  
+  
+ 
+ 
   return (
     <>
+      
       <Button onClick={(e) => {
         
         LoginLogout.current = e.target;
-        if(e.target.innerText ==='Login')
+        if(e.target.innerText ==='Login'|| localStorage.getItem('userObj')== null)
         {
           onOpen();
           
         }
         else
         {
-          
+          localStorage.removeItem("userObj")
+          e.target.innerText ='Login'
         }
-      }}>Login</Button>
+      }}>
+       
+       {loginState.current}
+      </Button>
+
+
+      {/* <Button onClick={onOpen}>Login</Button>
+      <Button onClick={onOpen}>logout</Button> */}
       <Modal
         initialFocusRef={initialRef}
         finalFocusRef={finalRef}
@@ -76,11 +100,10 @@ function ModelLogin() {
                 if (LoginLogout.current.innerText === 'Login') {
                   axios.get(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`).then(res => {
                     if (res.data[0].username === Login.username && res.data[0].password === Login.password) {
-                      
-                      LoginLogout.current.innerText = 'Logout'
-                      localStorage.setItem('userObj',JSON.stringify({user:res.data[0].username,password:res.data[0].password,id:res.data[0].id}));
-                      console.log('login');
+                      localStorage.setItem('userObj',JSON.stringify(Login));
+                      LoginLogout.current.innerText='Logout'
                       onClose()
+                      
                       }
                   });
                 }

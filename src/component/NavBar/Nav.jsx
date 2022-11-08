@@ -14,6 +14,9 @@ import {
   useBreakpointValue,
   useDisclosure,
   Image,
+  Button,
+  useColorMode,
+  
 } from '@chakra-ui/react';
 
 
@@ -21,12 +24,14 @@ import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
+  MoonIcon,
+  SunIcon,
 } from '@chakra-ui/icons';
 import ModelLogin from './ModelLogin';
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box>
       <Flex
@@ -81,6 +86,9 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
+            <Button onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
           <ModelLogin />
           {/*looooooooooooooooooogiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin */}
         </Stack>
