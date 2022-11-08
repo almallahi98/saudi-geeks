@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  FaGithub,
+  FaGithubAlt,
+  FaGithubSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 
 function CardAboutUs() {
   return (
@@ -27,7 +33,12 @@ function CardAboutUs() {
             <p>Full-Stack developer</p>
             <p>BA of Information Systems</p>
             <p>Trainee at Tuwaiq Academy</p>
-            <a href="linkedin">Find me on linkedin</a>
+            <a href="https://www.linkedin.com/in/ayman-alasiri-0bab63216/">
+              <FaLinkedin></FaLinkedin>
+            </a>
+            <a href="https://github.com/AymanAsiri95">
+              <FaGithub></FaGithub>
+            </a>
           </div>
         </div>
       </div>
@@ -45,7 +56,12 @@ function CardAboutUs() {
             <p>Full-Stack developer</p>
             <p>BA of </p>
             <p>BA of Information Systems</p>
-            <a href="linkedin">Find me on linkedin</a>
+            <a href="https://www.linkedin.com/in/mohammed-al-mallahi/">
+              <FaLinkedin></FaLinkedin>
+              <a href="https://github.com/almallahi98">
+                <FaGithub></FaGithub>
+              </a>
+            </a>
           </div>
         </div>
       </div>
@@ -63,7 +79,11 @@ function CardAboutUs() {
             <p>Full-Stack developer</p>
             <p>BA of</p>
             <p>Trainee at Tuwaiq Academy</p>
-            <a href="linkedin">Find me on linkedin</a>
+            <a href="https://www.linkedin.com/in/ahmad-alsaif/" />
+            <FaLinkedin></FaLinkedin>
+            <a href="https://github.com/alsaif1991">
+              <FaGithub></FaGithub>
+            </a>
           </div>
         </div>
       </div>
@@ -81,7 +101,11 @@ function CardAboutUs() {
             <p>Full-Stack developer</p>
             <p>BA of</p>
             <p>Trainee at Tuwaiq Academy</p>
-            <a href="linkedin">Find me on linkedin</a>
+            <a href="https://www.linkedin.com/in/ayman-alasiri-0bab63216/" />
+            <FaLinkedin></FaLinkedin>
+            <a href="https://github.com/mohamedbagabas">
+              <FaGithub></FaGithub>
+            </a>
           </div>
         </div>
       </div>
