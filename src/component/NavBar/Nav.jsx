@@ -1,6 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import { useNavigate } from "react-router-dom";
-import Login from './loginmodel/LoginForm';
+import Loginform from './loginmodel/LoginForm'
 import {
     Box,
     Flex,
@@ -121,7 +121,7 @@ import {
                 <Button  onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
-              <Login/>
+              <Loginform/>
           </Stack>
         </Flex>
          

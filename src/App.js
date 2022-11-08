@@ -3,7 +3,7 @@ import './App.css';
 
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import LoginFrom from './component/NavBar/loginmodel/LoginForm';
+
 import CardAboutUs from './component/About_us/CardAboutUs'
 import Footer from './component/Footer/Footer';
 import Nav from './component/NavBar/Nav'
@@ -28,9 +28,8 @@ function App() {
       
 
       {/* router here */}
-      <Nav/>
+       <Nav/>
       <Routes>
-
         <Route path='' element={<Home/>}/>
         <Route path='about_us' element={<CardAboutUs/>}/>
         <Route path='profile' element={<Profile/>}/>

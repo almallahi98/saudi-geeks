@@ -1,13 +1,15 @@
-.App{
+*{
     font-family: Garamond, serif;
-    
+    font-weight: bold;
 }
+
 
 
 .top-navbar {
     position: relative;
     z-index: 10;
   }
+  
   
   
   
