@@ -13,6 +13,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
 } from '@chakra-ui/react';
 
 
@@ -20,7 +21,6 @@ import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
-  ChevronRightIcon,
 } from '@chakra-ui/icons';
 import ModelLogin from './ModelLogin';
 
@@ -53,11 +53,22 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+
+          <Image
+            boxSize='25px'
+            objectFit='cover'
+            src='./resources/imges/Logo/logo.png'
+            alt='Dan Abramov'
+          />
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
-            Logo
+            color={useColorModeValue('gray.800', 'white')}
+            fontSize={'xl'}
+            fontStyle={'italic'}
+            fontWeight={'semibold'}
+            ml={'6px'}> 
+            IoT
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -70,8 +81,8 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <ModelLogin/> 
-          {/* */}
+          <ModelLogin />
+          {/*looooooooooooooooooogiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin */}
         </Stack>
       </Flex>
 
@@ -137,12 +148,12 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('gray.500', 'gray.900') }}>
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
             transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
+            _groupHover={{ color: 'gray.500' }}
             fontWeight={500}>
             {label}
           </Text>
@@ -156,7 +167,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
           justify={'flex-end'}
           align={'center'}
           flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+          {/* <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} /> */}
         </Flex>
       </Stack>
     </Link>
@@ -236,40 +247,38 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'home',
+    href: '#',
     children: [
       {
         label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
         href: '#',
       },
       {
         label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
         href: '#',
       },
     ],
   },
   {
-    label: 'Find Work',
+    label: 'About us',
+    href: '#',
     children: [
       {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
+        label: 'Contact us',
         href: '#',
       },
       {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
+        label: 'placeholder',
         href: '#',
       },
     ],
   },
   {
-    label: 'Learn Design',
+    label: 'placeholder',
     href: '#',
   },
   {
-    label: 'Hire Designers',
+    label: 'placeholder',
     href: '#',
   },
 ];

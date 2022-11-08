@@ -12,6 +12,22 @@ import {
 function Drop() {
   return (
     <Accordion allowToggle>
+      <AccordionItem>
+    <>
+      <AccordionButton>
+        <Box flex='1' textAlign='left'>
+        <Heading fontSize={'xl'}>FrontEnd</Heading>
+        </Box>
+        <AccordionIcon />
+      </AccordionButton>
+    </>
+    <AccordionPanel pb={4}>
+    <Text>since there's no visible and possible way to show row data to the user
+                            it became responsible to use a front-end framework such as React Js,
+                            and in our case, we will use it, its the best choice that will meet our
+                            requirements.</Text>
+    </AccordionPanel>
+  </AccordionItem>
   <AccordionItem>
     <>
       <AccordionButton>
@@ -44,6 +60,13 @@ function Drop() {
   </AccordionItem>
   
 </Accordion>
+
+
+
+
+
+
+
   )
 }
 
