@@ -8,6 +8,8 @@ import {
     useBreakpointValue,
     Box,
     SimpleGrid,
+    Button,
+    Link
 } from "@chakra-ui/react";
 
 function Hero() {
@@ -71,36 +73,31 @@ function Hero() {
                                 backgroundImage="url('/resources/imges/Ministry_OF_Energy_-_Saudi_Arabia.svg')"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
-                                
                                 height='100%'>
-                                    
+                                <Link color='teal.500' href='https://www.moenergy.gov.sa/en/Pages/default.aspx'> Ministry of Energy</Link>
                                 </Box>
                                 <Box 
                                 backgroundImage="url('/resources/imges/pngegg.png')"
-                                // backgroundImage="url('/resources/imges/20301.gif')"
+
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
                                 height='100%'>
-                                    
+                                <Link color='teal.500' href='https://www.vision2030.gov.sa/'> Vision 2030</Link>
                                 </Box>
                                 <Box 
                                 backgroundImage="url('/resources/imges/aramco.png')"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
                                 height='100%'
-                                maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'
-
                                 >
-                                    
+                                <Link color='teal.500' href='https://www.aramco.com/'> Aramco</Link>
                                 </Box>
                                 <Box 
                                 backgroundImage="url('/resources/imges/SDAIA.svg')"
                                 backgroundPosition="center"
                                 backgroundRepeat="no-repeat"
-                                height='100%'
-
-                                >
-                                    
+                                height='100%'>
+                                    <Link color='teal.500' href='https://sdaia.gov.sa/'> SDAIA</Link>  
                                 </Box>
                          
                             </SimpleGrid>
