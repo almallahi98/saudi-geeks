@@ -32,7 +32,7 @@ function LoginFrom() {
   
     return (
       <>
-       <Button onClick={(e) => {
+       <Button  onClick={(e) => {
         
         LoginLogout.current = e.target;
         if(e.target.innerText ==='Login')
@@ -45,18 +45,20 @@ function LoginFrom() {
           
         }
       }}>Login</Button>
-        <Modal
+      
+        <Modal 
+          
           LoginFromRef={initialRef}
           finalFocusRef={finalRef}
           isOpen={isOpen}
           onClose={onClose}
         >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>Login your Account</ModalHeader>
+          <ModalOverlay  />
+          <ModalContent   >
+            <ModalHeader >Login your Account</ModalHeader>
             <ModalCloseButton />
-            <ModalBody pb={6}>
-            <div>
+            <ModalBody  pb={6}>
+            <div >
         {/* google font */}
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         {/* icons */}
@@ -68,8 +70,8 @@ function LoginFrom() {
         <link rel="stylesheet" href="assets/css/extra_pages.css" />
         {/* favicon */}
         <link rel="shortcut icon" href="../assets/img/favicon.ico" />
-        <div className="limiter">
-          <div className="container-login100 page-background">
+        <div className="limiter"  >
+          <div className="container-login100 page-background" >
             <div className="wrap-login100">
               <form className="login100-form validate-form">
                 <div className="wrap-input100 validate-input" data-validate="Enter username">
@@ -91,12 +93,12 @@ function LoginFrom() {
                 </div>
                 <div className="contact100-form-checkbox">
                   <input className="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" />
-                  <label className="label-checkbox100" htmlFor="ckb1">
+                  <label  className="label-checkbox100" htmlFor="ckb1">
                     Remember me
                   </label>
                 </div>
                 <div className="container-login100-form-btn">
-                <Button
+                <Button 
               colorScheme="blue"
               mr={3}
               onClick={(e) => {

@@ -65,14 +65,14 @@ import {
 
     return (
         
-      <Box>
+      <Box >
         
         
         <Flex
         position={'fixed'}
            width={"100%"}
           fontFamily={'Garamond, serif'}
-          fontSize={17}
+          fontSize={27}
           fontWeight={'bold'}
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
@@ -80,11 +80,14 @@ import {
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
-          border={7}
-          borderStyle={'solid'}
+          
+          border={10}
+          
+          borderStyle={'bold'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
           align={'center'}>
           <Flex
+          
              
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
@@ -100,14 +103,19 @@ import {
             />
           </Flex>
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            
             <Text
+            
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
-              color={useColorModeValue('gray.800', 'white')}>
-              Logo
+              color={useColorModeValue('gray.800', 'white')}  >
+              
+              
             </Text>
+            <img width={'4%'} src={'./Saudi-modified.png'} ></img>
   
             <Flex  display={{ base: 'none', md: 'flex' }} ml={10}>
+              
               <DesktopNav />
             </Flex>
           </Flex>   
@@ -144,10 +152,12 @@ import {
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
+                  
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
+                  fontSize={'large'}
+                  fontFamily={'Garamond, serif'}
+                  fontWeight={'bold'}
                   color={linkColor}
                   _hover={{
                     textDecoration: 'none',
@@ -263,7 +273,7 @@ import {
   
         <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
           <Stack
-          
+            
             mt={2}
             pl={4}
             borderLeft={1}
@@ -287,6 +297,7 @@ import {
     subLabel?: string;
     children?: Array<NavItem>;
     href?: string;
+    
   }
   
   const NAV_ITEMS: Array<NavItem> = [
