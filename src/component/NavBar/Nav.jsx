@@ -56,7 +56,7 @@ export default function Nav() {
           </button>
           <div className="collapse navbar-collapse" id="navbars-rs-food">
             <ul className="navbar-nav ml-auto">
-               <Link className="nav-link" to="/">
+               <Link className="nav-link" to="/Home">
                   Home
                 </Link>
                 <Link className="nav-link" to="/About_us">

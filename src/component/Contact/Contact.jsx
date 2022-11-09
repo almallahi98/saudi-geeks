@@ -52,6 +52,7 @@ import {
     return (
       <Flex
         bg={useColorModeValue('gray.100', 'gray.900')}
+        // backgroundImage="url('/resources/imges/gif2.jpg')"
         align="center"
         justify="center"
         css={{
@@ -120,7 +121,8 @@ import {
                 </Stack>
   
                 <Box
-                  bgGradient='linear(to-l, #7928CA, #FF0080)'
+                  // bgGradient='linear(to-l, #7928CA, #FF0080)'
+                  backgroundImage="url('/resources/imges/bg1.gif')"
                   borderRadius="lg"
                   p={8}
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
@@ -155,12 +157,14 @@ import {
                       <FormLabel>Message</FormLabel>
   
                       <Textarea onChange={(e) => {
-          setMessege(e.target.value)}}
-  bgGradient={[
-    'linear(to-tr, teal.300, yellow.400)',
-    'linear(to-t, purple.200, teal.500)',
-    'linear(to-b, orange.100, purple.300)',
-  ]}
+                     setMessege(e.target.value)}}
+                    // bgGradient={[
+                    //   'linear(to-tr, teal.300, yellow.400)',
+                    //   'linear(to-t, purple.200, teal.500)',
+                    //   'linear(to-b, orange.100, purple.300)',
+                    //            ]}
+                    backgroundImage="url('/resources/imges/bg2.gif')"
+
                         name="message"
                         placeholder="Your Message"
                         rows={6}
@@ -169,7 +173,8 @@ import {
                     </FormControl>
   
                     <Button
-bgGradient='linear(to-r, teal.500, purple.500)'
+                      bgGradient='linear(to-r, teal.500, purple.500)'
+
                       bg="teal.400"
                       color="white"
                       _hover={{
