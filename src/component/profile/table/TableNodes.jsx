@@ -1,43 +1,57 @@
-import {React,useEffect, useState} from "react";
+import { React, useEffect } from "react";
 import {
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+    TableContainer,
 } from "@chakra-ui/react";
 function TableNodes() {
-    const [userObj, setuserObj] = useState({})
+    let userObj = JSON.parse(localStorage.getItem("userObj"));
+    let node = userObj.node;
     useEffect(() => {
-        setuserObj(JSON.parse(localStorage.getItem('userObj')));
-        console.log(userObj);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-    
-  return (
-    <TableContainer>
-      <Table variant="striped" colorScheme="teal">
-        
-        <Thead>
-          <Tr>
-            <Th>number</Th>
-            <Th>Node Name</Th>
-            <Th>multiply by</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
-          <Tr>
-            <Td>1</Td>
-            <Td>home</Td>
-            <Td>active</Td>
-          </Tr>
-        </Tbody>
-        
-      </Table>
-    </TableContainer>
-  );
+    }, []);
+
+    return (
+        <TableContainer>
+            <Table variant="striped" colorScheme="teal">
+                <Thead>
+                    <Tr>
+                        <Th>number</Th>
+                        <Th>Node Name</Th>
+                        <Th>location</Th>
+                        <Th>active</Th>
+                        <Th> </Th>
+
+                    </Tr>
+                </Thead>
+                <Tbody>
+                    {node.map((elm,i) => {
+                        return(<Tr key={i}>
+                            <Td>{elm.id}</Td>
+                            <Td>{elm.dname}</Td>
+                            <Td>{elm.location}</Td>
+                            <Td>{elm.dactive}</Td>
+                            <Td>555</Td>
+                        </Tr>)
+                    })}
+
+                    {/* {UserObj.map((elm, i) => {
+                        return (
+                            <Tr key={i}>
+                                <Td>{elm.id}</Td>
+                                <Td>{elm.name}</Td>
+                                <Td>{elm.activ}</Td>
+                            </Tr>
+                        );
+                    })} */}
+                </Tbody>
+            </Table>
+        </TableContainer>
+    );
 }
 
 export default TableNodes;

@@ -1,5 +1,7 @@
 import { React, useRef, useState,useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 import {
   Modal,
   ModalOverlay,
@@ -21,12 +23,12 @@ import {
 
 function ModelLogin() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [Login, setLogin] = useState({ username: '', password: '' })
+  const [Login, setLogin] = useState({id:'', username: '', password: '' ,node:[]})
   const loginState = useRef(null)
   const LoginLogout = useRef(null);
   const initialRef = useRef(null);
   const finalRef = useRef(null);
-  ;
+  const navigate = useNavigate();
   useEffect(() => {
     if(localStorage.getItem('userObj')!==null)
     {
@@ -38,9 +40,6 @@ function ModelLogin() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
-  
- 
- 
   return (
     <>
       
@@ -122,10 +121,12 @@ function ModelLogin() {
                 if (LoginLogout.current.innerText === 'Login') {
                   axios.get(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`).then(res => {
                     if (res.data[0].username === Login.username && res.data[0].password === Login.password) {
-                      localStorage.setItem('userObj',JSON.stringify(Login));
+                      
+                      setLogin({...Login,id:res.data[0]})
+                      localStorage.setItem('userObj',JSON.stringify(res.data[0]));
                       LoginLogout.current.innerText='Logout'
                       onClose()
-                      
+                      navigate('/profile');
                       }
                   });
                 }
