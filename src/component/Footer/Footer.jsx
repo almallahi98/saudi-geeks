@@ -77,7 +77,6 @@ export default function LargeWithAppLinksAndSocial() {
             <ListHeader>Find us</ListHeader>
             <i>Riyadh, Saudi Arabia</i>
             <EmailIcon></EmailIcon>
-            <i>Saudigeeks@info.com </i>
             <PhoneIcon></PhoneIcon>
             <i>No: 011 111 21</i>
             <i></i>
