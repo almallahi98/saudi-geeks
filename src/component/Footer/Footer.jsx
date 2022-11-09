@@ -78,7 +78,6 @@ export default function LargeWithAppLinksAndSocial() {
             <i>Riyadh, Saudi Arabia</i>
             <EmailIcon></EmailIcon>
             <PhoneIcon></PhoneIcon>
-            <i>No: 011 111 21</i>
             <i></i>
           </Stack>
           <Stack align={"flex-start"}>
