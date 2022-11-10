@@ -25,7 +25,8 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
     MoonIcon, 
-    SunIcon
+    SunIcon,
+    AtSignIcon
   } from '@chakra-ui/icons';
   import { ReactNode } from 'react';
 
@@ -129,7 +130,9 @@ import {
                 <Button  onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
+              
               <Loginform/>
+             
           </Stack>
         </Flex>
          

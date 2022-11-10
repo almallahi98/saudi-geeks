@@ -3,6 +3,15 @@ import { React, useRef, useState } from "react";
 import { useNavigate } from 'react-router'
 import axios from "axios";
 import {
+  HamburgerIcon,
+  CloseIcon,
+  ChevronDownIcon,
+  ChevronRightIcon,
+  MoonIcon, 
+  SunIcon,
+  AtSignIcon
+} from '@chakra-ui/icons';
+import {
     Modal,
     Button,
     ModalOverlay,
@@ -32,7 +41,8 @@ function LoginFrom() {
   
     return (
       <>
-       <Button  onClick={(e) => {
+      
+       <Button   onClick={(e) => {
         
         LoginLogout.current = e.target;
         if(e.target.innerText ==='Login')
@@ -44,8 +54,10 @@ function LoginFrom() {
         {
           onClose();
         }
-      }}>Login</Button>
-      
+        
+      }}> <AtSignIcon/>
+      Login </Button>
+       
         <Modal 
           
           LoginFromRef={initialRef}
