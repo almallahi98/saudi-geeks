@@ -25,7 +25,7 @@ function CardAboutUs() {
           />
           <div className="containerForCard">
             <h4>
-              <b>Ayman AlAsiri</b>
+              <b>Ayman Al Asiri</b>
             </h4>
             <p>Full-Stack developer</p>
             <p>BA of Information Systems</p>
@@ -52,7 +52,7 @@ function CardAboutUs() {
           />
           <div className="containerForCard">
             <h4>
-              <b>Mohammed AlMallahi</b>
+              <b>Mohammed Al Mallahi</b>
             </h4>
             <p>Full-Stack developer</p>
             <p>BA of Computer Science </p>
@@ -79,7 +79,7 @@ function CardAboutUs() {
           />
           <div className="containerForCard">
             <h4>
-              <b>Ahmed AlSaif</b>
+              <b>Ahmed Al Saif</b>
             </h4>
             <p>Full-Stack developer</p>
             <p>BA of English Language</p>
@@ -106,7 +106,7 @@ function CardAboutUs() {
           />
           <div className="containerForCard">
             <h4>
-              <b>Mohammed Bagabas</b>
+              <b>Mohamed Bagabas</b>
             </h4>
             <p>Full-Stack developer</p>
             <p>BA of Computer Science</p>
