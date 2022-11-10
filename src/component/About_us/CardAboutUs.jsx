@@ -31,13 +31,15 @@ function CardAboutUs() {
             <p>BA of Information Systems</p>
             <p>Trainee at Tuwaiq Academy</p>
             <div>
-              <a href="https://www.linkedin.com/in/ayman-alasiri-0bab63216/">
-                <FaLinkedin display={"inline"}></FaLinkedin>
-              </a>
+              <Center>
+                <a href="https://www.linkedin.com/in/ayman-alasiri-0bab63216/">
+                  <FaLinkedin></FaLinkedin>
+                  <a href="https://github.com/AymanAsiri95">
+                    <FaGithub></FaGithub>
+                  </a>
+                </a>
+              </Center>
             </div>
-            <a href="https://github.com/AymanAsiri95">
-              <FaGithub></FaGithub>
-            </a>
           </div>
         </div>
       </div>
