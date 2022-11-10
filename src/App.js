@@ -2,7 +2,7 @@ import React from 'react';
 //import logo from './logo.svg'; our icon gose here
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-
+//import create from 'zustand'
 //comp
 import CardAboutUs from './component/About_us/CardAboutUs'
 import Footer from './component/Footer/Footer';
@@ -13,7 +13,9 @@ import Nav from './component/NavBar/Nav'
 import Home from './component/Home/Home'
 import Profile from './component/profile/Profile';
 
+
 function App() {
+  
   return (
     <>
       <Nav />

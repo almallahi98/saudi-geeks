@@ -20,10 +20,15 @@ import {
 function ProfileAddNode() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [Device, setDevice] = useState({dname:'',location:'',dactive:false})
-
-    const addDevice=(node)=>{
-        axios.put(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user/${node.id}`,node).then(res=>{console.log(res);})
+    
+    const addDevice= async (node)=>{
+      await  axios.put(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user/${node.id}`,node).then(res=>{
+            console.log(res);
+           
+        })
     }
+
+    
     return (
         <>
             <Button bg={"#1a202c"} onClick={onOpen}>

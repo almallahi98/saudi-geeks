@@ -119,17 +119,31 @@ function ModelLogin() {
               mr={3}
               onClick={(e) => {
                 if (LoginLogout.current.innerText === 'Login') {
-                  axios.get(`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`).then(res => {
+                  let str=`https://6362428d7521369cd068e6aa.mockapi.io/api/test/v1/user?username=${Login.username}&password=${Login.password}`
+                  axios.get(str,Login).then(res => {
+                    console.log(res);
                     if (res.data[0].username === Login.username && res.data[0].password === Login.password) {
                       
                       setLogin({...Login,id:res.data[0]})
                       localStorage.setItem('userObj',JSON.stringify(res.data[0]));
                       LoginLogout.current.innerText='Logout'
                       onClose()
+                      console.log(Login);
                       navigate('/profile');
                       }
+                  
                   });
                 }
+          
+                
+              //   axios({
+              //     method:'post',
+              //     url:"http://localhost:80/saudi-geeks/api.php",
+              //     withCredentials: false,
+              //     headers: {
+              //       'Content-Type': 'application/json'
+              //       }
+              //     },Login).then(res=>{console.log(res);})
               }}
             >
               Login

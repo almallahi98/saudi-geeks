@@ -4,9 +4,9 @@ import React from "react";
 import ProfileAddNode from "./profileModel/ProfileAddNode";
 
 function Profile() {
-  return (
+ return (
     <Box h={'100vh'}>
-      <Box w={"100%"} bg={"black"} p={"50px"}>
+      <Box w={"100%"}  p={"50px"}>
         <Flex justifyContent={"start"} mb={'20px'}>
           <ProfileAddNode/>
         </Flex>
