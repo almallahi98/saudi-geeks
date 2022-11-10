@@ -11,7 +11,7 @@ function CardTech(props) {
                         src={
                             props.img
                         }
-                        alt="dd"
+                        alt=""
                         objectFit="contain"
                         width="100%"
                         minH={'100%'}
@@ -21,8 +21,8 @@ function CardTech(props) {
                         }}
                     />
                     <Flex direction={'column'} p={4} pt={[null,null,null,"30px"]} fontSize={'xl'}>
-                    <Text textAlign={'start'}>{"library Name : "+props.libName}</Text>
-                    <Text textAlign={'start'}>{'Roll : '+props.roll}</Text>
+                    <Text textAlign={'start'}>{props.libName+" "+props.roll}</Text>
+                    {/* <Text textAlign={'start'}>{props.roll}</Text> */}
                     </Flex>
                 </Flex>
             </Link>

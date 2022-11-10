@@ -1,11 +1,21 @@
 import React from 'react'
-import { Box, Center, SimpleGrid } from '@chakra-ui/react'
+import { Box, Center, SimpleGrid, Text } from '@chakra-ui/react'
 import CardTech from './CardTech'
 
 function Tech() {
   return (
+    <Box p={5} bg={'whiteAlpha.400'}>
+    <Text 
+    textAlign={'center'}
+    textColor={'whiteAlpha.800'}
+    fontSize={'2xl'}
+    fontStyle={'italic'}
+    fontWeight={'bold'}
+    mb={'8px'}>
+      technologies used to develop our solutions 
+    </Text>
     <Center>
-      <SimpleGrid columns={[1, 2, 2, 4]} spacingX={'5px'} spacingY={'15px'} py={5}>
+      <SimpleGrid columns={[1, 2, 2, 4]} spacingX={'5px'} spacingY={'15px'} >
         <Box maxW={'370px'}
           boxShadow='lg'
         >
@@ -47,6 +57,7 @@ function Tech() {
 
       </SimpleGrid>
     </Center>
+    </Box>
   )
 }
 

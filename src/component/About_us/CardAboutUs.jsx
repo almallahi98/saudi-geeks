@@ -6,7 +6,7 @@ import {
   FaGithubSquare,
   FaLinkedin,
 } from "react-icons/fa";
-import "animate.css";
+//import "animate.css";
 
 function CardAboutUs() {
   return (
