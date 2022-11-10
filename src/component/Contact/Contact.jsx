@@ -20,7 +20,7 @@ import {
   // import React from 'react';
   import React, { useState } from 'react'
   import axios from "axios";
-  import { BsGithub,BsPerson } from 'react-icons/bs';
+  import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs';
   import { MdEmail, MdOutlineEmail } from 'react-icons/md';
   //// لازم تحمل رياكت ايكون
   const confetti = {
@@ -71,9 +71,10 @@ import {
                   base: '4xl',
                   md: '5xl',
                 }}>
-                Get in Touch
+                Contact us
               </Heading>
-  
+              {/* <Box bg="tomato" w="100%" p={4} color="white">
+              Get in touch how you like, the choice is yours. </Box> */}
               <Stack
                 spacing={{ base: 4, md: 8, lg: 20 }}
                 direction={{ base: 'column', md: 'row' }}>
@@ -99,7 +100,20 @@ import {
                       isRound
                     />
                   </Tooltip>
-  
+                  <Link href="https://twitter.com/#">
+                  <IconButton
+                    aria-label="twitter"
+                    variant="ghost"
+                    size="lg"
+                    icon={<BsTwitter size="28px" />}
+                    _hover={{
+                      bg: 'blue.500',
+                      color: useColorModeValue('white', 'gray.700'),
+                    }}
+                    isRound
+                  />
+                </Link>
+
                   <Link href="https://github.com/#">
                     <IconButton
                       aria-label="github"
@@ -116,7 +130,19 @@ import {
                   </Link>
   
 
-  
+                  <Link href="https://linkedin.com/#">
+                  <IconButton
+                    aria-label="linkedin"
+                    variant="ghost"
+                    size="lg"
+                    icon={<BsLinkedin size="28px" />}
+                    _hover={{
+                      bg: 'blue.500',
+                      color: useColorModeValue('white', 'gray.700'),
+                    }}
+                    isRound
+                  />
+                </Link>
 
                 </Stack>
   

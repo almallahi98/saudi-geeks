@@ -14,11 +14,11 @@ function App() {
   return (
     <>
       {/* <Nav/> */}
-{/* <Contact/> */}
+<Contact/>
       {/* router here */}
-      <Routes>
+      {/* <Routes>
       <Route path='' element={<Home/>}/>
-      </Routes>
+      </Routes> */}
       
     </>
   );
