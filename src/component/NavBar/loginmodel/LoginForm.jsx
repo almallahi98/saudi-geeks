@@ -53,12 +53,12 @@ function LoginFrom() {
           isOpen={isOpen}
           onClose={onClose}
         >
-          <ModalOverlay  />
-          <ModalContent   >
-            <ModalHeader >Login your Account</ModalHeader>
+          <ModalOverlay   />
+          <ModalContent background= {'transparent'}    >
+            <ModalHeader></ModalHeader>
             <ModalCloseButton />
             <ModalBody  pb={6}>
-            <div >
+            <div  >
         {/* google font */}
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         {/* icons */}
@@ -71,10 +71,10 @@ function LoginFrom() {
         {/* favicon */}
         <link rel="shortcut icon" href="../assets/img/favicon.ico" />
         <div className="limiter"  >
-          <div className="container-login100 page-background" >
-            <div className="wrap-login100">
-              <form className="login100-form validate-form">
-                <div className="wrap-input100 validate-input" data-validate="Enter username">
+          <div className="container-login100 page-background"  >
+            <div className="wrap-login100" >
+              <form className="login100-form validate-form" >
+                <div className="wrap-input100 validate-input" data-validate="Enter username" >
                   <input className="input100" type="username"  ref={initialRef} name="username" placeholder="username" required onChange={ e=>{
                     setLogin({...Login , username : e.target.value})
                   } } />
