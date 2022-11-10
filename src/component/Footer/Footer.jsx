@@ -10,6 +10,7 @@ import {
   chakra,
   useColorModeValue,
   Icon,
+  Center,
 } from "@chakra-ui/react";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { EmailIcon, PhoneIcon } from "@chakra-ui/icons";
@@ -76,22 +77,37 @@ export default function LargeWithAppLinksAndSocial() {
           <Stack align={"flex-start"}>
             <ListHeader>Find us</ListHeader>
             <i>Riyadh, Saudi Arabia</i>
-            <EmailIcon></EmailIcon>
+            <img
+              style={{ width: "30px" }}
+              src="https://cdn-icons-png.flaticon.com/512/546/546394.png"
+              alt=""
+            />{" "}
+            ssss
             <PhoneIcon></PhoneIcon>
             <i></i>
           </Stack>
-          <Stack align={"flex-start"}>
+          {/* <Stack align={"flex-start"}>
             <ListHeader>Legal</ListHeader>
             <Link href={"#"}>Cookies Policy</Link>
             <Link href={"#"}>Privacy Policy</Link>
             <Link href={"#"}>Terms of Service</Link>
             <Link href={"#"}>Law Enforcement</Link>
-          </Stack>
+          </Stack> */}
 
           <Stack align={"flex-start"}>
-            <ListHeader>Install App</ListHeader>
-            {/* <AppStoreBadge />
-            <PlayStoreBadge /> */}
+            <ListHeader>Follow us</ListHeader>
+            <SocialButton label={"Twitter"} href={"https://twitter.com/"}>
+              <FaTwitter />
+            </SocialButton>
+            <SocialButton
+              label={"Instagram"}
+              href={"https://www.instagram.com/"}
+            >
+              <FaInstagram />
+            </SocialButton>
+            <SocialButton label={"Youtube"} href={"https://www.youtube.com/"}>
+              <FaYoutube />
+            </SocialButton>
           </Stack>
         </SimpleGrid>
       </Container>

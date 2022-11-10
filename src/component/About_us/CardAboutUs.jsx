@@ -1,3 +1,4 @@
+import { Center } from "@chakra-ui/react";
 import React from "react";
 import {
   FaGithub,
@@ -5,20 +6,21 @@ import {
   FaGithubSquare,
   FaLinkedin,
 } from "react-icons/fa";
+import "animate.css";
 
 function CardAboutUs() {
   return (
     <div className="AboutUsBody">
       <div id="AboutUsText">
-        <div id="aboutHeading">
-          <h1>Meet the Saudi Geeks Team </h1>
-        </div>
         <div>
           <p id="aboutPTagStyle">
             We are a group of full-stack developers training in Tuwaiq Academy
             (JavaScript Bootcamp) We decided to build IoT app that help users to
             manage their devices remotely !
           </p>
+        </div>
+        <div id="aboutHeading">
+          <h1>Meet Saudi Geeks Team </h1>
         </div>
       </div>
       <div id="Cardd">
@@ -60,12 +62,16 @@ function CardAboutUs() {
             <p>Full-Stack developer</p>
             <p>BA of Computer Science </p>
             <p>Trainee at Tuwaiq Academy</p>
-            <a href="https://www.linkedin.com/in/mohammed-al-mallahi/">
-              <FaLinkedin></FaLinkedin>
-              <a href="https://github.com/almallahi98">
-                <FaGithub></FaGithub>
-              </a>
-            </a>
+            <div>
+              <Center>
+                <a href="https://www.linkedin.com/in/mohammed-al-mallahi/">
+                  <FaLinkedin></FaLinkedin>
+                  <a href="https://github.com/almallahi98">
+                    <FaGithub></FaGithub>
+                  </a>
+                </a>
+              </Center>
+            </div>
           </div>
         </div>
       </div>
