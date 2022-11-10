@@ -276,13 +276,5 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '#',
       }
     ],
-  },
-  {
-    label: 'placeholder1',
-    href: '#',
-  },
-  {
-    label: 'placeholder2',
-    href: '#',
-  },
+  } 
 ];
