@@ -2,9 +2,7 @@
     position: relative;
     z-index: 10;
   }
-  
-  
-  
+    
   .top-navbar .navbar-light .navbar-nav .nav-link {
     color: #134be5;
     font-size: 18px;
@@ -18,9 +16,11 @@
     align-items: center;
     display: flex;
     font-size: larger;
-    padding-top: 10px;
-    font-family: Garamond, serif;  
+    padding-top: 50px;
+    font-family: cursive;
     font-weight: bold;
+    color: #041f69;
+    padding-bottom: 10px;
   }
 
   #aboutPTagStyle {
@@ -42,9 +42,7 @@
     transition: 0.3s;
     width: 40%;
     border-radius: 5px;
-    width:100%;
-    /* background-color: rgb(240, 230, 217); */
-   
+    width:100%;   
   }
   
   .card:hover {
@@ -57,18 +55,18 @@
     align-items: center;
     display: inline;
     padding-top: 10px;
-    width: 70%;
+    width: 50%;
   
   }
   
   .containerForCard {
     padding: 10px 16px;
+    color: #041f69;
   
   }
   
   #Cardd {
     display: inline-table;
-    /* border: 1px solid rgb(245, 242, 242); */
     border-radius: 20px;
     flex-direction: column;
     padding-left: 10px;
@@ -77,12 +75,11 @@
     align-items: center;
     padding-left: 80px;
     padding-top: 20px;
+    padding-bottom: 60px;
   }
   
   .AboutUsBody{
-    padding-bottom: 20px;
-    background-size: cover;
-    /* background-image: url('https://www.cpacanada.ca/-/media/site/operational/rg-research-guidance-and-support/images/02306-rg.jpg'); */
+    padding-bottom: 10%;
   }
 
   #AboutUsText {
@@ -91,9 +88,7 @@
     box-shadow: 0 8px 16px 0 rgba(70, 25, 25, 0.1);
     
   }
-  
-  .gitHubLogo {
     
-    height: 80px;
-  
+  .H1D1 {
+    color: #0531aa;
   }

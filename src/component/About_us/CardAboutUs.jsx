@@ -11,16 +11,9 @@ import "animate.css";
 function CardAboutUs() {
   return (
     <div className="AboutUsBody">
-      <div id="AboutUsText">
-        <div>
-          <p id="aboutPTagStyle">
-            We are a group of full-stack developers training in Tuwaiq Academy
-            (JavaScript Bootcamp) We decided to build IoT app that help users to
-            manage their devices remotely !
-          </p>
-        </div>
+      <div className="AboutUsText">
         <div id="aboutHeading">
-          <h1>Meet Saudi Geeks Team </h1>
+          <h1>Meet Saudi Geeks Team ! </h1>
         </div>
       </div>
       <div id="Cardd">
@@ -87,14 +80,18 @@ function CardAboutUs() {
               <b>Ahmed AlSaif</b>
             </h4>
             <p>Full-Stack developer</p>
-            <p>BA of</p>
+            <p>BA of English Language</p>
             <p>Trainee at Tuwaiq Academy</p>
-            <a href="https://www.linkedin.com/in/ahmad-alsaif/">
-              <FaLinkedin></FaLinkedin>
-              <a href="https://github.com/alsaif1991">
-                <FaGithub></FaGithub>
-              </a>
-            </a>
+            <div>
+              <Center>
+                <a href="https://www.linkedin.com/in/ahmad-alsaif/">
+                  <FaLinkedin></FaLinkedin>
+                  <a href="https://github.com/alsaif1991">
+                    <FaGithub></FaGithub>
+                  </a>
+                </a>
+              </Center>
+            </div>
           </div>
         </div>
       </div>
@@ -112,12 +109,16 @@ function CardAboutUs() {
             <p>Full-Stack developer</p>
             <p>BA of Computer Science</p>
             <p>Trainee at Tuwaiq Academy</p>
-            <a href="https://www.linkedin.com/in/ayman-alasiri-0bab63216/">
-              <FaLinkedin></FaLinkedin>
-              <a href="https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D8%AF-%D8%A8%D8%A7%D9%82%D8%A8%D8%B5-5a37101b2/">
-                <FaGithub></FaGithub>
-              </a>
-            </a>
+            <div>
+              <Center>
+                <a href="https://www.linkedin.com/in/ayman-alasiri-0bab63216/">
+                  <FaLinkedin></FaLinkedin>
+                  <a href="https://www.linkedin.com/in/%D9%85%D8%AD%D9%85%D8%AF-%D8%A8%D8%A7%D9%82%D8%A8%D8%B5-5a37101b2/">
+                    <FaGithub></FaGithub>
+                  </a>
+                </a>
+              </Center>
+            </div>
           </div>
         </div>
       </div>

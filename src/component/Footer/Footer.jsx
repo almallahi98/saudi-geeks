@@ -61,7 +61,7 @@ const SocialButton = ({
 export default function LargeWithAppLinksAndSocial() {
   return (
     <Box
-      bg={useColorModeValue("gray.50", "gray.900")}
+      bg={useColorModeValue("white", "gray.800")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container as={Stack} maxW={"6xl"} py={10}>
@@ -75,24 +75,22 @@ export default function LargeWithAppLinksAndSocial() {
           </Stack>
 
           <Stack align={"flex-start"}>
-            <ListHeader>Find us</ListHeader>
+            <ListHeader>Contact</ListHeader>
             <i>Riyadh, Saudi Arabia</i>
-            <img
-              style={{ width: "30px" }}
-              src="https://cdn-icons-png.flaticon.com/512/546/546394.png"
-              alt=""
-            />{" "}
-            ssss
             <PhoneIcon></PhoneIcon>
+            <i>011 225 2233</i>
+            <EmailIcon></EmailIcon>
+            <i>Saudigeeks@info.com</i>
+
             <i></i>
           </Stack>
-          {/* <Stack align={"flex-start"}>
+          <Stack align={"flex-start"}>
             <ListHeader>Legal</ListHeader>
             <Link href={"#"}>Cookies Policy</Link>
             <Link href={"#"}>Privacy Policy</Link>
             <Link href={"#"}>Terms of Service</Link>
             <Link href={"#"}>Law Enforcement</Link>
-          </Stack> */}
+          </Stack>
 
           <Stack align={"flex-start"}>
             <ListHeader>Follow us</ListHeader>
@@ -125,20 +123,7 @@ export default function LargeWithAppLinksAndSocial() {
           spacing={4}
           justify={{ md: "space-between" }}
           align={{ md: "center" }}
-        >
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
-          <Stack direction={"row"} spacing={6}>
-            <SocialButton label={"Twitter"} href={"#"}>
-              <FaTwitter />
-            </SocialButton>
-            <SocialButton label={"YouTube"} href={"#"}>
-              <FaYoutube />
-            </SocialButton>
-            <SocialButton label={"Instagram"} href={"#"}>
-              <FaInstagram />
-            </SocialButton>
-          </Stack>
-        </Container>
+        ></Container>
       </Box>
     </Box>
   );
