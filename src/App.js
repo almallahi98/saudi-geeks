@@ -30,7 +30,6 @@ function App() {
         {/* <Route path='about' element={''}/> page is not completed */}
       </Routes>
       <Footer />
-
     </>
   );
 }
