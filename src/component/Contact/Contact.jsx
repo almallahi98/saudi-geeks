@@ -73,8 +73,8 @@ import {
                 }}>
                 Contact us
               </Heading>
-              {/* <Box bg="tomato" w="100%" p={4} color="white">
-              Get in touch how you like, the choice is yours. </Box> */}
+              <Box      backgroundImage="url('/resources/imges/bg4.gif')" w="100%" p={4} color="white">
+              Get in touch how you like, the choice is yours. </Box>
               <Stack
                 spacing={{ base: 4, md: 8, lg: 20 }}
                 direction={{ base: 'column', md: 'row' }}>
